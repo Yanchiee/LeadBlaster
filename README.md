@@ -1,5 +1,7 @@
 # LeadBlaster Pro
 
+> **This is a deliberately insecure test project for security training purposes. All API keys are fake. Do not use this in production.**
+
 A lead-generation SaaS platform built with Supabase + vanilla JS. Collects business leads, enriches them with AI, and lets users export contact lists.
 
 ## Quick Start
