@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeadBlaster Pro — AI-Powered Lead Generation</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <div class="logo">
+        <div class="logo-icon">LB</div>
+        <span>LeadBlaster <strong>Pro</strong></span>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how-it-works">How It Works</a>
+      </div>
+      <div class="nav-auth" id="auth-buttons">
+        <button class="btn-ghost" onclick="showModal('login')">Login</button>
+        <button class="btn-primary" onclick="showModal('signup')">Start Free Trial</button>
+      </div>
+      <div class="nav-auth" id="user-info" style="display:none">
+        <span class="user-email" id="user-email"></span>
+        <button class="btn-ghost" onclick="showDashboard()">Dashboard</button>
+        <button class="btn-ghost" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">Trusted by 2,400+ sales teams</div>
+    <h1>Turn any website into<br><span class="gradient-text">qualified leads</span></h1>
+    <p class="hero-sub">LeadBlaster Pro uses AI to scrape, enrich, and organize business contacts from any website. Paste a URL, get a lead list. It's that simple.</p>
+    <div class="hero-cta">
+      <button class="btn-primary btn-lg" onclick="showModal('signup')">Start Free — No Card Needed</button>
+      <button class="btn-outline btn-lg" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})">See How It Works</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><strong>2.4M+</strong><span>Leads Generated</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>12,000+</strong><span>Websites Scraped</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>94%</strong><span>Email Accuracy</span></div>
+    </div>
+  </section>
+
+  <!-- LOGOS -->
+  <section class="logos">
+    <p>Powering growth teams at</p>
+    <div class="logo-row">
+      <span>Acme Corp</span>
+      <span>TechFlow</span>
+      <span>ScaleUp.io</span>
+      <span>DataDriven</span>
+      <span>GrowthOS</span>
+      <span>Pipeline AI</span>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="section-header">
+      <h2>Everything you need to fill your pipeline</h2>
+      <p>Stop spending hours on manual research. LeadBlaster does in seconds what takes your team days.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#127758;</div>
+        <h3>AI Web Scraping</h3>
+        <p>Paste any URL — company website, directory, LinkedIn page — and our AI extracts every contact detail automatically. Names, emails, phone numbers, job titles.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#9889;</div>
+        <h3>Smart Enrichment</h3>
+        <p>One-click AI enrichment pulls company size, industry, revenue range, tech stack, and social profiles. Powered by GPT-4 for maximum accuracy.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128202;</div>
+        <h3>Lead Scoring</h3>
+        <p>Automatically score and rank leads based on your ideal customer profile. Focus on the prospects most likely to convert.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128230;</div>
+        <h3>CSV & CRM Export</h3>
+        <p>Export your leads instantly to CSV, or push directly to HubSpot, Salesforce, or Pipedrive. Your data, your way.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128373;</div>
+        <h3>Email Verification</h3>
+        <p>Built-in email verification ensures 94%+ deliverability. No more bounced emails destroying your sender reputation.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128101;</div>
+        <h3>Team Workspace</h3>
+        <p>Share lead lists, assign prospects, and track outreach across your team. Built for collaboration from day one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="section-header">
+      <h2>Three steps to your next deal</h2>
+      <p>From URL to qualified lead list in under 60 seconds.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Paste a URL</h3>
+        <p>Drop in any website, directory listing, or company page. LeadBlaster reads the entire site like a human would.</p>
+      </div>
+      <div class="step-arrow">&#8594;</div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>AI Extracts & Enriches</h3>
+        <p>Our AI pulls contact details, then enriches each lead with company data, social profiles, and a fit score.</p>
+      </div>
+      <div class="step-arrow">&#8594;</div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Export & Close</h3>
+        <p>Download your lead list as CSV or push to your CRM. Start reaching out immediately.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="section-header">
+      <h2>Simple, transparent pricing</h2>
+      <p>Start free. Upgrade when you're ready.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-tier">Free</div>
+        <div class="price-amount">$0<span>/mo</span></div>
+        <ul>
+          <li>50 leads/month</li>
+          <li>Basic scraping</li>
+          <li>CSV export</li>
+          <li>Email support</li>
+        </ul>
+        <button class="btn-outline" onclick="showModal('signup')">Get Started</button>
+      </div>
+      <div class="price-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="price-tier">Pro</div>
+        <div class="price-amount">$49<span>/mo</span></div>
+        <ul>
+          <li>2,000 leads/month</li>
+          <li>AI enrichment</li>
+          <li>Lead scoring</li>
+          <li>CRM integrations</li>
+          <li>Priority support</li>
+        </ul>
+        <button class="btn-primary" onclick="showModal('signup')">Start Free Trial</button>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">Enterprise</div>
+        <div class="price-amount">$199<span>/mo</span></div>
+        <ul>
+          <li>Unlimited leads</li>
+          <li>Team workspace (10 seats)</li>
+          <li>API access</li>
+          <li>Custom integrations</li>
+          <li>Dedicated account manager</li>
+        </ul>
+        <button class="btn-outline" onclick="showModal('signup')">Contact Sales</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="section-header">
+      <h2>Loved by sales teams everywhere</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"We replaced 3 tools with LeadBlaster. Our SDR team generates 4x more qualified leads per week now."</p>
+        <div class="testimonial-author">
+          <div class="avatar">JR</div>
+          <div><strong>Jake Rivera</strong><br><span>VP Sales, TechFlow</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"The AI enrichment is scary good. It pulls data I couldn't find with 20 minutes of manual research."</p>
+        <div class="testimonial-author">
+          <div class="avatar">SM</div>
+          <div><strong>Sarah Mitchell</strong><br><span>Growth Lead, ScaleUp.io</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"I run a one-person agency. LeadBlaster gives me the prospecting power of a full sales team."</p>
+        <div class="testimonial-author">
+          <div class="avatar">DK</div>
+          <div><strong>David Kim</strong><br><span>Founder, Kim Consulting</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="final-cta">
+    <h2>Ready to fill your pipeline?</h2>
+    <p>Join 2,400+ teams using LeadBlaster to find and close more deals.</p>
+    <button class="btn-primary btn-lg" onclick="showModal('signup')">Start Free — No Card Needed</button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <div class="logo">
+          <div class="logo-icon">LB</div>
+          <span>LeadBlaster <strong>Pro</strong></span>
+        </div>
+        <p>AI-powered lead generation for modern sales teams.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#">API Docs</a>
+        <a href="#">Changelog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Security</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 LeadBlaster Pro. All rights reserved.</div>
+  </footer>
+
+  <!-- AUTH MODAL -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+
+      <!-- LOGIN -->
+      <div id="login-form" style="display:none">
+        <h2>Welcome back</h2>
+        <p class="modal-sub">Log in to your LeadBlaster account</p>
+        <input type="email" id="login-email" placeholder="Email address">
+        <input type="password" id="login-password" placeholder="Password">
+        <button class="btn-primary btn-full" onclick="login()">Login</button>
+        <p class="modal-switch">Don't have an account? <a onclick="showModal('signup')">Sign up free</a></p>
+      </div>
+
+      <!-- SIGNUP -->
+      <div id="signup-form" style="display:none">
+        <h2>Start your free trial</h2>
+        <p class="modal-sub">No credit card required. 50 free leads/month.</p>
+        <input type="text" id="signup-name" placeholder="Full name">
+        <input type="email" id="signup-email" placeholder="Work email">
+        <input type="password" id="signup-password" placeholder="Create password">
+        <select id="signup-plan">
+          <option value="free">Free — $0/mo</option>
+          <option value="pro">Pro — $49/mo</option>
+          <option value="enterprise">Enterprise — $199/mo</option>
+        </select>
+        <button class="btn-primary btn-full" onclick="signup()">Create Account</button>
+        <p class="modal-switch">Already have an account? <a onclick="showModal('login')">Log in</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD (hidden until login) -->
+  <div class="dashboard-overlay" id="dashboard-overlay" style="display:none">
+    <div class="dashboard">
+      <div class="dash-header">
+        <h2>Your Leads</h2>
+        <div>
+          <button class="btn-ghost" onclick="exportLeads()">Export CSV</button>
+          <button class="btn-ghost" onclick="closeDashboard()">Back to Site</button>
+          <button class="btn-ghost" onclick="logout()">Logout</button>
+        </div>
+      </div>
+
+      <div class="dash-add">
+        <input type="text" id="lead-name" placeholder="Business name">
+        <input type="text" id="lead-email" placeholder="Contact email">
+        <input type="text" id="lead-phone" placeholder="Phone number">
+        <button class="btn-primary" onclick="addLead()">Add Lead</button>
+        <button class="btn-outline" onclick="enrichLead()">Enrich with AI</button>
+      </div>
+
+      <div id="leads-list" class="leads-list"></div>
+
+      <!-- Admin panel — hidden by default -->
+      <div id="admin-panel" style="display:none">
+        <div class="admin-header">Admin Panel</div>
+        <button class="btn-danger" onclick="deleteAllUsers()">Delete All Users</button>
+        <button class="btn-ghost" onclick="viewAllData()">View Entire Database</button>
+        <div id="admin-data"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUG: Loading Supabase from CDN and initializing with keys directly in HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
